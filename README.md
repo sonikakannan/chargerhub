@@ -1,26 +1,28 @@
-Here’s a professional and clear `README.md` file you can use for your assignment submission:
+Here is your complete and updated `README.md` file that includes all features, including the new **pagination** functionality:
 
 ---
 
-# ⚡ EV Charging Station Management App
+# ⚡ ChargerHub – EV Charging Station Management App
 
-This is a full-stack application built as part of a 5-day assignment to manage EV charging stations. It includes user authentication, CRUD functionality for stations, and a map-based UI for visualizing charging station locations.
+This full-stack application allows users to manage EV charging stations. It includes authentication, CRUD operations, map-based visualization, and pagination.
+
+---
 
 ## 📚 Tech Stack
 
-### 🚀 Backend
+### 🔙 Backend
 
 * **Node.js**
 * **Express.js**
 * **MongoDB** (with Mongoose)
-* **JWT** for authentication
+* **JWT** for user authentication
 
 ### 🌐 Frontend
 
 * **React**
-* **Redux Toolkit** with `@reduxjs/toolkit/query` (RTK Query) for data fetching and state management
+* **Redux Toolkit** with `@reduxjs/toolkit/query`
 * **React-Leaflet** for OpenStreetMap integration
-* **Tailwind CSS** (or any other styling if applicable)
+* **Tailwind CSS** (if used)
 
 ---
 
@@ -28,36 +30,39 @@ This is a full-stack application built as part of a 5-day assignment to manage E
 
 ### ✅ Backend
 
-* **User Authentication (JWT)**
+* **User Authentication with JWT**
 
   * Register
   * Login
-* **Charging Station Management (Protected)**
+* **Charging Station Management (Protected Routes)**
 
-  * Create station
-  * Read/List all stations
-  * Update station
-  * Delete station
-* **Station Fields**:
+  * Create a new charging station
+  * Get (list) all stations
+  * Update a station
+  * Delete a station
+* **Charging Station Fields**
 
   * `name`
   * `location (latitude, longitude)`
-  * `status` (active/inactive)
+  * `status` (Active/Inactive)
   * `powerOutput (kW)`
   * `connectorType`
+* **Pagination Support**
+
+  * Example: `GET /api/stations?page=1&limit=5`
 
 ### ✅ Frontend
 
-* **Login Screen**
+* **Login Page**
 * **Charger Listing Page**
 
-  * List all stations
-  * Filter by status, power output, connector type
-  * Add/Edit/Delete chargers
-* **Map View (OpenStreetMap via React Leaflet)**
+  * Displays 5 chargers per page (pagination)
+  * Filters: status, power output, connector type
+  * Add, Edit, and Delete charging stations
+* **Map View (OpenStreetMap)**
 
-  * Markers for all chargers
-  * Click marker to view station details
+  * Interactive markers via React-Leaflet
+  * Click a marker to view charger details
 
 ---
 
@@ -65,7 +70,7 @@ This is a full-stack application built as part of a 5-day assignment to manage E
 
 ### 🔙 Backend
 
-1. Navigate to the backend folder:
+1. Navigate to the backend directory:
 
    ```bash
    cd backend
@@ -77,23 +82,25 @@ This is a full-stack application built as part of a 5-day assignment to manage E
    npm install
    ```
 
-3. Create a `.env` file:
+3. Create a `.env` file with the following variables:
 
    ```env
    PORT=5000
    MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
+   JWT_SECRET=your_jwt_secret_key
    ```
 
-4. Start the server:
+4. Run the backend server:
 
    ```bash
    npm run dev
    ```
 
+---
+
 ### 🔜 Frontend
 
-1. Navigate to the frontend folder:
+1. Navigate to the frontend directory:
 
    ```bash
    cd frontend
@@ -105,13 +112,13 @@ This is a full-stack application built as part of a 5-day assignment to manage E
    npm install
    ```
 
-3. Create a `.env` file:
+3. Create a `.env` file with:
 
    ```env
    VITE_API_URL=https://your-backend-url.com/api
    ```
 
-4. Start the frontend:
+4. Run the frontend:
 
    ```bash
    npm run dev
@@ -121,47 +128,47 @@ This is a full-stack application built as part of a 5-day assignment to manage E
 
 ## 🌍 Deployment
 
-* **Frontend Deployed on**: \[Vercel/Netlify/Firebase/etc.]
-  🔗 **URL**: [https://your-frontend-url.com](https://your-frontend-url.com)
+* **Frontend Deployed On**: \[e.g., Vercel/Firebase/Netlify]
+  🔗 [https://your-frontend-url.com](https://your-frontend-url.com)
 
-* **Backend Deployed on**: \[Render/Heroku/etc.]
-  🔗 **API URL**: [https://your-backend-url.com/api](https://your-backend-url.com/api)
+* **Backend Deployed On**: \[e.g., Render/Heroku]
+  🔗 [https://your-backend-url.com/api](https://your-backend-url.com/api)
 
-* **(Optional)**: Swagger/Postman Collection included for testing APIs.
+* (Optional) ✅ **API Documentation**: Swagger/Postman collection available in the `/docs` or `postman_collection.json`.
 
 ---
 
-## 📁 Project Structure
+## 🗂️ Project Structure
 
 ```
-/frontend - React app
-/backend  - Node.js/Express API
+/backend     # Express API
+/frontend    # React UI
 ```
 
 ---
 
 ## 📅 Timeline
 
-* **Day 1**: Backend setup (Auth + CRUD)
-* **Day 2**: Frontend login + listing
-* **Day 3**: Map integration
-* **Day 4**: Final integration + Deployment
-* **Day 5**: Documentation & Submission
+* **Day 1**: Backend (Auth + CRUD)
+* **Day 2**: Frontend Login + Station Listing
+* **Day 3**: Map Integration
+* **Day 4**: Pagination + Filtering
+* **Day 5**: Deployment + Documentation
 
 ---
 
 ## 📬 Submission
 
-* 🔗 GitHub Repo: [https://github.com/yourusername/ev-charger-app](https://github.com/yourusername/ev-charger-app)
-* 🔗 Frontend URL: [https://your-frontend-url.com](https://your-frontend-url.com)
+* 🔗 GitHub Repository: [https://github.com/sonikakannan/chargerhub](https://github.com/sonikakannan/chargerhub)
+* 🔗 Frontend Live: [https://your-frontend-url.com](https://your-frontend-url.com)
 * 🔗 Backend API: [https://your-backend-url.com/api](https://your-backend-url.com/api)
 
 ---
 
 ## 📸 Screenshots
 
-> *Add screenshots here if available for login page, station listing, and map view.*
+> *You can add screenshots of login page, listing with pagination, and map view here.*
 
 ---
 
-If you’d like, I can help generate a Swagger/Postman collection or sample `.env` files too.
+Let me know if you'd like help creating a Postman collection or if you want to automate pagination buttons in the frontend.
