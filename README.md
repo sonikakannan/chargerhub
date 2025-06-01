@@ -46,7 +46,7 @@
 ### ✅ Frontend
 
 * **Login Page**
-* **Charger Listing Page**
+* **Dashboard Page**
 
   * Displays 5 chargers per page (pagination)
   * Filters: status, power output, connector type
