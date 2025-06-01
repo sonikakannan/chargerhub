@@ -1,8 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const BASE_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:5001/charger"
+    : "https://chargerhub-backend.onrender.com/charger";
+
 export const chargerApi = createApi({
   reducerPath: "chargerApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5001/charger" }),
+  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
     createCharger: builder.mutation({
       query: (charger) => ({
