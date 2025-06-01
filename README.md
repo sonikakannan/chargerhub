@@ -1,11 +1,4 @@
-Here is your complete and updated `README.md` file that includes all features, including the new **pagination** functionality:
-
----
-
 # ⚡ ChargerHub – EV Charging Station Management App
-
-This full-stack application allows users to manage EV charging stations. It includes authentication, CRUD operations, map-based visualization, and pagination.
-
 ---
 
 ## 📚 Tech Stack
@@ -22,7 +15,7 @@ This full-stack application allows users to manage EV charging stations. It incl
 * **React**
 * **Redux Toolkit** with `@reduxjs/toolkit/query`
 * **React-Leaflet** for OpenStreetMap integration
-* **Tailwind CSS** (if used)
+* **Tailwind CSS** 
 
 ---
 
@@ -40,6 +33,8 @@ This full-stack application allows users to manage EV charging stations. It incl
   * Get (list) all stations
   * Update a station
   * Delete a station
+  * Pagination Support
+    
 * **Charging Station Fields**
 
   * `name`
@@ -47,9 +42,6 @@ This full-stack application allows users to manage EV charging stations. It incl
   * `status` (Active/Inactive)
   * `powerOutput (kW)`
   * `connectorType`
-* **Pagination Support**
-
-  * Example: `GET /api/stations?page=1&limit=5`
 
 ### ✅ Frontend
 
@@ -61,7 +53,7 @@ This full-stack application allows users to manage EV charging stations. It incl
   * Add, Edit, and Delete charging stations
 * **Map View (OpenStreetMap)**
 
-  * Interactive markers via React-Leaflet
+  * Displaying OpenStreetMap data using the Leaflet library in a React
   * Click a marker to view charger details
 
 ---
@@ -85,9 +77,9 @@ This full-stack application allows users to manage EV charging stations. It incl
 3. Create a `.env` file with the following variables:
 
    ```env
-   PORT=5000
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret_key
+   PORT=5001
+   MONGODB_URI=mongodb+srv://sonikakannan66:rw8pOgyVGiMnqzQf@cluster0.0oh2xct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+   JWT_SECRET=randomsecret
    ```
 
 4. Run the backend server:
@@ -115,7 +107,7 @@ This full-stack application allows users to manage EV charging stations. It incl
 3. Create a `.env` file with:
 
    ```env
-   VITE_API_URL=https://your-backend-url.com/api
+   VITE_API_URL= https://chargerhub-backend.onrender.com
    ```
 
 4. Run the frontend:
@@ -128,13 +120,13 @@ This full-stack application allows users to manage EV charging stations. It incl
 
 ## 🌍 Deployment
 
-* **Frontend Deployed On**: \[e.g., Vercel/Firebase/Netlify]
-  🔗 [https://your-frontend-url.com](https://your-frontend-url.com)
+* **Frontend Deployed On**: \[Render]
+  🔗 [https://chargerhub-frontend.onrender.com)
 
-* **Backend Deployed On**: \[e.g., Render/Heroku]
-  🔗 [https://your-backend-url.com/api](https://your-backend-url.com/api)
+* **Backend Deployed On**: \[Render]
+  🔗 [https://chargerhub-backend.onrender.com)
 
-* (Optional) ✅ **API Documentation**: Swagger/Postman collection available in the `/docs` or `postman_collection.json`.
+* (Optional) ✅ **API Documentation**: Postman collection available in the `postman_collection.json`.
 
 ---
 
@@ -146,29 +138,3 @@ This full-stack application allows users to manage EV charging stations. It incl
 ```
 
 ---
-
-## 📅 Timeline
-
-* **Day 1**: Backend (Auth + CRUD)
-* **Day 2**: Frontend Login + Station Listing
-* **Day 3**: Map Integration
-* **Day 4**: Pagination + Filtering
-* **Day 5**: Deployment + Documentation
-
----
-
-## 📬 Submission
-
-* 🔗 GitHub Repository: [https://github.com/sonikakannan/chargerhub](https://github.com/sonikakannan/chargerhub)
-* 🔗 Frontend Live: [https://your-frontend-url.com](https://your-frontend-url.com)
-* 🔗 Backend API: [https://your-backend-url.com/api](https://your-backend-url.com/api)
-
----
-
-## 📸 Screenshots
-
-> *You can add screenshots of login page, listing with pagination, and map view here.*
-
----
-
-Let me know if you'd like help creating a Postman collection or if you want to automate pagination buttons in the frontend.
