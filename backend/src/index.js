@@ -18,7 +18,7 @@ app.use(cookiePraser());
 app.use(cors({
   origin: [
     "http://localhost:5173", 
-    ""
+    "https://chargerhub-frontend.onrender.com"
   ],
   credentials: true,
 }));
